@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+
+
+
+body {
+    font-family: "Black Ops One", system-ui;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main heading */
+h1 {
+    margin-bottom: 10px;
+    font-size: 3rem;
+}
+
+/* Container for boards */
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+/* Grouping player board and shipyard */
+.board-and-shipyard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title for boards */
+.board-title {
+    margin: 0 0 10px 0;
+}
+
+
+#player-board-title {
+    padding-right: 200px;
+}
+
+
+/* Board wrapper: align boards and shipyard horizontally */
+.board-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Gameboard: a grid of 10x10 cells */
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 2px;
+    background-color: #1e3a8a;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #1e3a8a;
+}
+
+/* Board cell style */
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #cce7ff;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cell.hit {
+    background-color: red;
+}
+
+.cell.miss {
+    background-color: lightgray;
+}
+
+/* Placed ship cells */
+.cell.ship {
+    background-color: #444;
+    border: 1px solid black;
+}
+
+/* Damaged ship cell */
+.cell.ship-damaged {
+    background-color: darkorange;
+}
+
+.cell.ship-preview {
+    min-width: 40px;
+}
+
+
+/* Shipyard container: fixed size equal to gameboard height (approx 10x40 + gaps ~ 400px) */
+.shipyard {
+    background-color: #1e3a8a;
+    padding: 10px;
+    border-radius: 10px;
+    width: 220px;
+    min-height: 410px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Each ship entry in shipyard */
+.ship-entry {
+    width: 100%;
+    text-align: center;
+}
+
+.ship-name {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+/* Container for ship preview (always horizontal) */
+.ship-preview-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+/* Controls styling */
+.controls {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Message styling */
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #1e3a8a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #16316b;
+}

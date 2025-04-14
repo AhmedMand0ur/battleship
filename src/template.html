@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Battleship Game</title>
+    </head>
+
+    <body>
+        <h1>Battleship</h1>
+        <div class="game-container">
+            <div class="board-and-shipyard">
+                <h2 class="board-title" id="player-board-title">Your Board</h2>
+                <div class="board-wrapper">
+                    <div id="player-board" class="gameboard"></div>
+                    <div id="ships-container" class="shipyard"></div>
+                </div>
+            </div>
+            <div class="board-container">
+                <h2 class="board-title">Enemy Board</h2>
+                <div id="enemy-board" class="gameboard"></div>
+            </div>
+        </div>
+        <div id="message">Place your ships!</div>
+        <div class="controls">
+            <button id="toggle-orientation" class="btn">Toggle Orientation</button>
+            <!-- Here, we define 0 as Vertical and 1 as Horizontal for placement -->
+            <div id="orientation-message">Orientation: Vertical</div>
+        </div>
+        <button id="reset-button" class="btn">Reset Game</button>
+    </body>
+
+</html>
