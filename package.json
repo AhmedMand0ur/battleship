@@ -6,6 +6,7 @@
     "babel-jest": "^29.7.0",
     "css-loader": "^7.1.2",
     "eslint": "^9.23.0",
+    "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
@@ -15,8 +16,14 @@
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1"
   },
+  "name": "battleship-game",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint src/ --fix"
-  }
+    "lint": "eslint src/ --fix",
+    "build": "webpack --mode production",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "homepage": "https://AhmedMandour.github.io/battleship"
 }
